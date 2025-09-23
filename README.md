@@ -1,11 +1,7 @@
 **Violence Detection System**
 **Overview**
 
-This project is a Real-Time Violence Detection System that integrates: - YOLOv8 for object detection,
-                                                                       - MoveNet for human pose estimation,
-                                                                       - A custom LSTM classifier for temporal violence recognition,
-                                                                       - MongoDB for logging detection events,
-                                                                       - OpenCV for video capture, frame processing, and recording.
+This project is a Real-Time Violence Detection System that integrates: - YOLOv8 for object detection, MoveNet for human pose estimation, A custom LSTM classifier for temporal violence recognition, MongoDB for logging detection events, OpenCV for video capture, frame processing, and recording.
 The system monitors live or recorded video streams and triggers alerts when violent activity is detected.
 
 **Features**
