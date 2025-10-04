@@ -1,12 +1,42 @@
-**Violence Detection System**
-**Overview**
+# Real-Time Violence Detection System
 
-This project is a Real-Time Violence Detection System that integrates: - YOLOv8 for object detection, MoveNet for human pose estimation, A custom LSTM classifier for temporal violence recognition, MongoDB for logging detection events, OpenCV for video capture, frame processing, and recording.
-The system monitors live or recorded video streams and triggers alerts when violent activity is detected.
+## Project Description
+This project implements a real-time violence detection system using computer vision and deep learning techniques. It combines YOLOv8 for person detection, MoveNet for pose estimation, and LSTM models to analyze sequences of frames for violent activity. The system can process live CCTV footage or video files and detect violent events in real-time. Alerts are generated when violent behavior is detected, and videos can be logged for future reference. The system also supports MongoDB for storing detection events and video records.
 
-**Features**
-- Real-time detection from cameras or video files.
-- Combination of pose (MoveNet) and object context (YOLOv8) features.
-- Custom LSTM model trained on violent vs non-violent sequences (60 frames, 224×224 resolution).
-- Logs detection events (camera ID, timestamp, probability, snapshot) to MongoDB.
-- Saves flagged clips and can trigger email/SMS/webhook alerts.
+## How to Run the Project
+
+### 1. Clone the repository
+```
+git clone https://github.com/frustberg/Realtime_Violence_Detection_System-Using-Yolov8-Movenet-CNN.git
+cd Realtime_Violence_Detection_System-Using-Yolov8-Movenet-CNN
+```
+
+### 2. Install dependencies
+Create a virtual environment (optional but recommended):
+```
+python -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+```
+Install required packages:
+```
+pip install -r requirements.txt
+```
+
+### 3. Configure MongoDB (if logging is enabled)
+- Start your MongoDB server.
+- Update the MongoDB connection URL in the config file (if any).
+
+### 4. Run the system
+- To process live camera feed:
+```
+python main.py --source 0
+```
+- To process a video file:
+```
+python main.py --source path_to_video.mp4
+```
+
+### 5. Optional parameters
+- `--display` : Set to `True` to show the real-time video with detection overlays.
+- `--save_video` : Set to `True` to save the processed video with detection annotations.
+
