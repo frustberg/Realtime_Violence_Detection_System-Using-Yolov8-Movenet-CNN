@@ -73,7 +73,7 @@ init_interpreter()
 utils.init_audio()
 
 pygame.mixer.init()  # 🔔 Initialize audio system
-alarm_playing = False  # 🔔 Track alarm state
+alarm_playing = False  
 
 try:
     cap = cv2.VideoCapture(0)
