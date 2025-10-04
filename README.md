@@ -1,7 +1,7 @@
 # Real-Time Violence Detection System
 
-## Project Description
-This project implements a real-time violence detection system using computer vision and deep learning techniques. It combines YOLOv8 for person detection, MoveNet for pose estimation, and LSTM models to analyze sequences of frames for violent activity. The system can process live CCTV footage or video files and detect violent events in real-time. Alerts are generated when violent behavior is detected, and videos can be logged for future reference. The system also supports MongoDB for storing detection events and video records.
+## Overview
+The system monitors video streams in real-time to detect violent activity using a combination of computer vision and deep learning techniques. It leverages YOLOv8 for detecting people in the frame, MoveNet for estimating human poses, and an LSTM model to analyze motion patterns over time. When violent behavior is detected, the system can generate alerts and log the video or event details, making it suitable for CCTV surveillance and security monitoring. Alerts are generated when violent behavior is detected, and videos can be logged for future reference. The system also integrates MongoDB to store detection events for future analysis.
 
 ## How to Run the Project
 
